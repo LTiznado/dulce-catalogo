@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#c95a4d" />
+    <title>Catálogo | FersiÑam</title>
+    <meta name="description" content="Elige galletas, boxes y postres FersiÑam. Arma tu pedido y envíalo listo por WhatsApp." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:title" content="Catálogo FersiÑam" />
+    <meta property="og:description" content="Elige tus sabores y envía el pedido listo por WhatsApp." />
+    <meta property="og:image" content="assets/og-fersinam-instagram.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="assets/og-fersinam-instagram.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Fraunces:opsz,wght@9..144,600..900&family=Kaushan+Script&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20260731e" />
+  </head>
+  <body data-page="catalog">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <div class="announcement"><span>Pedidos con 2 días de anticipación</span><span aria-hidden="true">•</span><span>Delivery coordinado por WhatsApp</span></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="FersiÑam, ir al inicio"><img class="brand-logo brand-logo-header" src="assets/brand/fersinam-logo-hq.png" alt="" /></a>
+      <div class="header-controls">
+        <nav class="desktop-nav" aria-label="Navegación principal"><a href="index.html">Inicio</a><a class="is-current" href="#catalogo" aria-current="location">Catálogo</a><a href="#informacion">Información</a></nav>
+        <div class="header-actions">
+          <button class="cart-link cart-open-button" type="button" aria-controls="orderPanel"><span>Pedido</span><span class="cart-count" data-cart-count>0</span></button>
+          <a class="button button-dark header-cta" href="#catalogo"><span>Elegir sabores</span></a>
+          <button class="menu-button" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span></button>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil"><a href="index.html">Inicio</a><a href="#catalogo">Catálogo</a><a href="#informacion">Información</a></nav>
+    </header>
+
+    <main id="contenido">
+      <section class="catalog-hero section-shell">
+        <p class="eyebrow">Menú de temporada</p>
+        <div class="catalog-hero-row">
+          <h1>Elige lo que te<br /><em>alegra el día.</em></h1>
+          <p>Agrega tus favoritos. Al final prepararemos un mensaje con todo el pedido para enviarlo por WhatsApp.</p>
+        </div>
+      </section>
+
+      <section class="catalog-layout section-shell" id="catalogo" aria-label="Catálogo de productos">
+        <div class="catalog-main">
+          <div class="catalog-tools">
+            <div class="filters" id="categoryFilters" aria-label="Filtrar productos"></div>
+            <label class="search-field">
+              <span class="sr-only">Buscar producto</span>
+              <input id="productSearch" type="search" placeholder="Buscar sabor…" autocomplete="off" />
+              <span aria-hidden="true">⌕</span>
+            </label>
+          </div>
+          <p class="result-count" id="resultCount" aria-live="polite"></p>
+          <div class="catalog-grid" id="productGrid"></div>
+          <div class="no-results" id="noResults" hidden>
+            <h2>No encontramos ese sabor.</h2>
+            <p>Prueba con otro nombre o revisa todas las categorías.</p>
+          </div>
+        </div>
+
+        <aside class="order-panel" id="orderPanel" aria-labelledby="orderTitle">
+          <div class="order-panel-header">
+            <div><p class="eyebrow">Tu selección</p><h2 id="orderTitle">Mi pedido</h2></div>
+            <button class="order-close-button" type="button" aria-label="Cerrar pedido">×</button>
+          </div>
+          <div class="cart-list" id="cartList" aria-live="polite"></div>
+          <div class="cart-summary">
+            <div><span>Subtotal estimado</span><strong id="cartTotal">S/ 0.00</strong></div>
+            <p>El costo de delivery se confirma por WhatsApp.</p>
+          </div>
+          <div class="customer-fields">
+            <label>Tu nombre <input id="customerName" type="text" placeholder="Ej. Luis" autocomplete="name" /></label>
+            <label>Distrito <input id="customerDistrict" type="text" placeholder="Ej. Surco" autocomplete="address-level2" /></label>
+            <label>Fecha preferida <input id="customerDate" type="date" /></label>
+          </div>
+          <a class="button button-whatsapp button-full disabled" id="whatsappButton" href="#" target="_blank" rel="noreferrer" aria-disabled="true">Enviar pedido por WhatsApp <span aria-hidden="true">↗</span></a>
+          <p class="order-note">El pedido queda confirmado después de validar disponibilidad y pago.</p>
+        </aside>
+      </section>
+
+      <section class="catalog-info" id="informacion">
+        <div class="section-shell info-shell">
+          <div class="info-heading">
+            <div>
+              <p class="eyebrow">Antes de pedir</p>
+              <h2>Todo claro antes<br />del primer bocado.</h2>
+            </div>
+            <p>Horneamos especialmente para cada pedido. Por eso coordinamos contigo los detalles antes de confirmar la preparación y la entrega.</p>
+          </div>
+
+          <div class="info-grid">
+            <article>
+              <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" /></svg></span>
+              <p class="info-kicker">Hecho por pedido</p>
+              <h3>Anticipación</h3>
+              <p>Realiza tu pedido con 2 días de anticipación para que podamos prepararlo especialmente para ti.</p>
+            </article>
+            <article>
+              <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 6h11v11H3zM14 10h4l3 3v4h-7zM7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" /></svg></span>
+              <p class="info-kicker">Coordinado contigo</p>
+              <h3>Delivery</h3>
+              <p>Confirmamos cobertura, horario y costo según el distrito antes de cerrar tu pedido.</p>
+            </article>
+            <article>
+              <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 4C11 4 6 8 6 14c0 3 2 5 5 5 6 0 9-6 9-15ZM4 20c2-5 6-8 12-11" /></svg></span>
+              <p class="info-kicker">Queremos cuidarte</p>
+              <h3>Ingredientes</h3>
+              <p>Si tienes alergias o restricciones alimentarias, cuéntanos antes de realizar el pago.</p>
+            </article>
+          </div>
+
+          <div class="info-contact">
+            <div class="info-contact-copy">
+              <span class="info-social-mark" aria-hidden="true">F</span>
+              <div><p>¿Tienes una duda especial?</p><strong>Conversemos antes de preparar tu box.</strong></div>
+            </div>
+            <div class="info-contact-actions">
+              <a class="info-instagram" data-instagram-link href="#" target="_blank" rel="noreferrer">Instagram <span data-instagram-handle>@fersi.nam</span> ↗</a>
+              <a class="button button-light" data-whatsapp-link href="#" target="_blank" rel="noreferrer">Escribir por WhatsApp ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main section-shell">
+        <div><a class="brand footer-brand" href="index.html"><img class="brand-logo brand-logo-footer" src="assets/brand/fersinam-logo-hq.png" alt="FersiÑam" /></a><p>Galletas y postres artesanales hechos por pedido en Lima.</p></div>
+        <div class="footer-links"><div><strong>Explora</strong><a href="index.html">Inicio</a><a href="#catalogo">Catálogo</a><a href="#informacion">Información</a></div><div><strong>Conversemos</strong><a data-whatsapp-link href="#" target="_blank" rel="noreferrer">WhatsApp</a><a data-instagram-link href="#" target="_blank" rel="noreferrer">Instagram</a></div></div>
+      </div>
+      <div class="footer-bottom section-shell"><span>© <span data-current-year></span> FersiÑam</span><span>Precios y disponibilidad sujetos a confirmación.</span></div>
+    </footer>
+
+    <button class="mobile-cart-bar cart-open-button" type="button" aria-controls="orderPanel"><span><strong data-cart-count>0</strong> productos</span><span>Ver mi pedido</span><span id="mobileCartTotal">S/ 0.00</span></button>
+    <div class="page-overlay" id="pageOverlay"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="data/catalog.js?v=20260731e"></script>
+    <script src="script.js?v=20260731e"></script>
+  </body>
+</html>
